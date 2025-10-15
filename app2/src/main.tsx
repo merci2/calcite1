@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from 'react'//für JSX Interpretation
+import ReactDOM from 'react-dom/client'//App.tsx in index.html bei root einfügen
+import App from './App.tsx'//Hauptkomponente. Wurzel der UI
+import './global.css'
 
 // Calcite Components laden
 import { defineCustomElements } from '@esri/calcite-components/dist/loader'

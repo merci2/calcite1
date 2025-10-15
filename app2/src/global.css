@@ -1,0 +1,38 @@
+/* src/global.css */
+
+/* src/global.css - Minimales CSS Reset für Calcite-Projekte */
+
+/* 
+  Universal Selector - Betrifft ALLE Elemente 
+  Verhindert, dass padding/border die Elementgröße verändert
+  Beispiel: Eine Box mit width: 200px bleibt 200px, auch mit padding: 20px
+  **Ohne box-sizing (Standard):
+Element mit width: 200px + padding: 20px = 240px breit
+**Mit box-sizing: border-box:*
+Element mit width: 200px + padding: 20px = 200px breit
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 
+  Body Element - Der Hauptcontainer der gesamten Seite
+  margin: 0 → Entfernt Browser-Standard-Abstand (meist 8px)
+  min-height: 100vh → Mindestens volle Bildschirmhöhe (viewport height)
+*/
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* 
+  Root Container - Hier mounted React die App (siehe index.html: <div id="root">)
+  min-height: 100vh → Sorgt dafür, dass die App immer mindestens Bildschirmhöhe hat
+  Wichtig für: Zentriertes Layout, Sticky Footer, Fullscreen-Apps
+*/
+#root {
+  min-height: 100vh;
+}
+
+
+
