@@ -1,0 +1,73 @@
+/* MainContent Container - Dark Mode */
+.container {
+  min-height: 100vh;
+  background: var(--calcite-color-background);
+  padding: 2rem;
+  color: var(--calcite-color-text-1);
+}
+
+/* Content Wrapper mit maximaler Breite */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Titel */
+.title {
+  margin-top: 0;
+  color: var(--calcite-color-text-1);
+  border-bottom: 2px solid var(--calcite-color-border-1);
+  padding-bottom: 1rem;
+}
+
+/* Info Sections */
+.infoSection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--calcite-color-foreground-1);
+  border-radius: 8px;
+  border-left: 4px solid var(--calcite-color-brand);
+}
+
+.infoSection h3 {
+  margin-top: 0;
+  color: var(--calcite-color-text-1);
+}
+
+/* Liste */
+.list {
+  line-height: 1.8;
+  color: var(--calcite-color-text-2);
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.list strong {
+  color: var(--calcite-color-brand);
+}
+
+/* Code-Tags */
+code {
+  background: var(--calcite-color-foreground-2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+/* Optional: Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .content {
+    max-width: 100%;
+  }
+  
+  .infoSection {
+    padding: 1rem;
+  }
+}
