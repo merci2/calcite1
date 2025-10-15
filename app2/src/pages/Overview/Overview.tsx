@@ -1,4 +1,20 @@
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import SitesGridView from "../SitesGridView/SitesGridView";
+import SitesMapOverview from "../SitesMapOverview/SitesMapOverview";
+
+const Overview = () => {
+    const { viewType } = useParams<{ viewType: string }>();
+    
+    return viewType === "map" ? <SitesMapOverview /> : <SitesGridView />;
+}
+
+export default Overview;
+
+
+
+
+
+/* import { useLocation } from "react-router-dom";
 import SitesGridView from "../SitesGridView/SitesGridView";
 import SitesMapOverview from "../SitesMapOverview/SitesMapOverview";
 
@@ -12,4 +28,4 @@ const Overview = () => {
     return viewType === "map" ? <SitesMapOverview /> : <SitesGridView />;
 }
 
-export default Overview;
+export default Overview; */

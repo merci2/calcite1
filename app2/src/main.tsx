@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import AppRouter from './routes/AppRouter';
 import './global.css'
 
 // Calcite Web Components im Browser registrieren
@@ -14,6 +14,6 @@ defineCustomElements(window);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <AppRouter />
   </React.StrictMode>,
 )
