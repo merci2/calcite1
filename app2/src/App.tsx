@@ -1,111 +1,45 @@
-import { useState } from 'react';
 import '@esri/calcite-components/dist/calcite/calcite.css';
 
 // React Components importieren
 import {
   CalciteShell,
   CalciteShellPanel,
-  CalcitePanel,
-  CalciteButton,
-  CalciteIcon,
-  CalciteInput,
-  CalciteLabel
+  CalcitePanel
 } from '@esri/calcite-components-react';
 
-interface TodoItem {
-  id: number;
-  text: string;
-}
-
 function App() {
-  const [inputValue, setInputValue] = useState<string>('');
-  const [items, setItems] = useState<TodoItem[]>([]);
-
-  const handleAddItem = (): void => {
-    if (inputValue.trim()) {
-      setItems([...items, { 
-        id: Date.now(), 
-        text: inputValue
-      }]);
-      setInputValue('');
-    }
-  };
-
-  const totalCount = items.length;
-
   return (
     <CalciteShell>
-      {/* Panel bleibt hell */}
+      {/* Linkes Panel - LEER */}
       <CalciteShellPanel slot="panel-start" displayMode="float" width="m">
-        <CalcitePanel heading="Calcite Lernprojekt">
-          <div style={{ padding: '1rem' }}>
-            <h3 style={{ marginTop: 0 }}>Willkommen! 👋</h3>
-            <p style={{ color: '#6e6e6e', fontSize: '0.9rem' }}>
-              Dies ist deine erste Calcite App mit React & TypeScript!
-            </p>
-            
-            <CalciteLabel>
-              Neue Aufgabe hinzufügen
-              <CalciteInput
-                value={inputValue}
-                onCalciteInputInput={(e) => setInputValue((e.target as HTMLCalciteInputElement).value)}
-                placeholder="z.B. Calcite Buttons lernen..."
-                onKeyDown={(e) => e.key === 'Enter' && handleAddItem()}
-              />
-            </CalciteLabel>
-
-            <CalciteButton 
-              appearance="solid" 
-              width="full"
-              onClick={handleAddItem}
-              style={{ marginTop: '1rem' }}
-            >
-              <CalciteIcon icon="plus" slot="icon-start" />
-              Hinzufügen
-            </CalciteButton>
-
-            {totalCount > 0 && (
-              <div style={{ 
-                marginTop: '1.5rem', 
-                padding: '1rem', 
-                background: '#f3f3f3',
-                borderRadius: '4px'
-              }}>
-                <strong>Aufgaben:</strong>
-                <div style={{ marginTop: '0.5rem' }}>
-                  {items.map(item => (
-                    <div key={item.id} style={{ padding: '0.5rem 0' }}>
-                      • {item.text}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+        <CalcitePanel heading="CalcitePanel (heading)">
+          <div style={{ padding: '1rem', color: '#6e6e6e', fontSize: '0.9rem' }}>
+            <p>↑ Oben: <strong>CalcitePanel</strong> mit heading-Attribut</p>
+            <p>← Links: <strong>CalciteShellPanel</strong> (slot="panel-start")</p>
+            <p>→ Rechts: Hauptbereich ist ein normales <strong>&lt;div&gt;</strong></p>
           </div>
         </CalcitePanel>
       </CalciteShellPanel>
 
-      {/* Hauptbereich - DUNKEL mit Calcite CSS-Variable */}
-      <div style={{ 
-        minHeight: '100vh',
-        background: 'var(--calcite-color-background)',
-        padding: '2rem'
-      }} className="calcite-mode-dark">
-        {/* Hier ist jetzt NUR dunkler Hintergrund - kein Content */}
-        <div style={{ 
-          color: 'var(--calcite-color-text-1)',
-          maxWidth: '1200px',
-          margin: '0 auto'
-        }}>
-          {/* Optional: Platzhalter-Text */}
-          <p style={{ 
-            textAlign: 'center', 
-            marginTop: '20vh',
-            fontSize: '1.2rem',
-            opacity: 0.5
-          }}>
-            Hauptinhalt-Bereich (dunkel)
-          </p>
+      {/* Hauptbereich - DUNKEL und LEER */}
+      <div 
+        className="calcite-mode-dark" 
+        style={{ 
+          minHeight: '100vh',
+          background: 'var(--calcite-color-background)',
+          padding: '2rem',
+          color: 'var(--calcite-color-text-1)'
+        }}
+      >
+        <div style={{ maxWidth: '800px' }}>
+          <h2 style={{ marginTop: 0 }}>Hauptbereich (Content Area)</h2>
+          <p>Dies ist ein normales HTML <code>&lt;div&gt;</code> Element</p>
+          <ul style={{ lineHeight: 1.8 }}>
+            <li><strong>CalciteShell</strong> = Container für alles (umschließt Panel + Hauptbereich)</li>
+            <li><strong>CalciteShellPanel</strong> = Das Seitenpanel (links/rechts positionierbar)</li>
+            <li><strong>CalcitePanel</strong> = Komponente mit Überschrift/Header im ShellPanel</li>
+            <li><strong>div mit className="calcite-mode-dark"</strong> = Aktiviert Dark Mode</li>
+          </ul>
         </div>
       </div>
     </CalciteShell>
