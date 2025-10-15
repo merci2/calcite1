@@ -1,19 +1,13 @@
-import React from 'react'//für JSX Interpretation
-import ReactDOM from 'react-dom/client'//App.tsx in index.html bei root einfügen
-import App from './App.tsx'//Hauptkomponente. Wurzel der UI
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
 import './global.css'
 
 // Calcite Components laden
 import { defineCustomElements } from '@esri/calcite-components/dist/loader'
-import { setAssetPath } from '@esri/calcite-components/dist/components'
 
-// Asset Path setzen (wichtig für Icons!)
-// In Production werden Assets aus /assets geladen, in Dev vom CDN
-setAssetPath(
-  import.meta.env.PROD 
-    ? '/assets' 
-    : 'https://js.arcgis.com/calcite-components/2.13.2/assets'
-);
+// Asset Path wird automatisch gesetzt - node_modules Pfad
+import '@esri/calcite-components/dist/calcite/calcite.css'
 
 // Custom Elements definieren
 defineCustomElements(window);
