@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './global.css'
 
-// Calcite Components laden
+// Calcite Web Components im Browser registrieren
 import { defineCustomElements } from '@esri/calcite-components/dist/loader'
 
-// Asset Path wird automatisch gesetzt - node_modules Pfad
+// aus node_modules
 import '@esri/calcite-components/dist/calcite/calcite.css'
 
 // Custom Elements definieren
