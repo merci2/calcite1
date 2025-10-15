@@ -3,22 +3,18 @@ import '@esri/calcite-components/dist/calcite/calcite.css';
 // React Components importieren
 import {
   CalciteShell,
-  CalciteShellPanel,
-  CalcitePanel
+  CalciteShellPanel
 } from '@esri/calcite-components-react';
+
+// Eigene Komponente importieren
+import ProjectsPanel from './components/ProjectsPanel/ProjectsPanel';
 
 function App() {
   return (
     <CalciteShell>
-      {/* Linkes Panel - LEER */}
+      {/* Linkes Panel mit ProjectsPanel Komponente */}
       <CalciteShellPanel slot="panel-start" displayMode="float" width="m">
-        <CalcitePanel heading="CalcitePanel (heading)">
-          <div style={{ padding: '1rem', color: '#6e6e6e', fontSize: '0.9rem' }}>
-            <p>↑ Oben: <strong>CalcitePanel</strong> mit heading-Attribut</p>
-            <p>← Links: <strong>CalciteShellPanel</strong> (slot="panel-start")</p>
-            <p>→ Rechts: Hauptbereich ist ein normales <strong>&lt;div&gt;</strong></p>
-          </div>
-        </CalcitePanel>
+        <ProjectsPanel />
       </CalciteShellPanel>
 
       {/* Hauptbereich - DUNKEL und LEER */}
@@ -35,10 +31,10 @@ function App() {
           <h2 style={{ marginTop: 0 }}>Hauptbereich (Content Area)</h2>
           <p>Dies ist ein normales HTML <code>&lt;div&gt;</code> Element</p>
           <ul style={{ lineHeight: 1.8 }}>
-            <li><strong>CalciteShell</strong> = Container für alles (umschließt Panel + Hauptbereich)</li>
-            <li><strong>CalciteShellPanel</strong> = Das Seitenpanel (links/rechts positionierbar)</li>
-            <li><strong>CalcitePanel</strong> = Komponente mit Überschrift/Header im ShellPanel</li>
-            <li><strong>div mit className="calcite-mode-dark"</strong> = Aktiviert Dark Mode</li>
+            <li><strong>CalciteShell</strong> = Container für alles</li>
+            <li><strong>CalciteShellPanel</strong> = Das Seitenpanel (links)</li>
+            <li><strong>ProjectsPanel</strong> = Eigene Component mit CalcitePanel</li>
+            <li><strong>Translation aus global.json</strong> = "Heading"</li>
           </ul>
         </div>
       </div>

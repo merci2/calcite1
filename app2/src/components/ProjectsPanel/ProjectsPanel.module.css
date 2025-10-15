@@ -1,0 +1,16 @@
+/* ProjectsPanel Styles */
+
+.content {
+  padding: 1rem;
+}
+
+/* Optional: Weitere Styles für Panel-Content */
+.content h3 {
+  margin-top: 0;
+  color: var(--calcite-color-text-1);
+}
+
+.content p {
+  color: var(--calcite-color-text-2);
+  line-height: 1.5;
+}
