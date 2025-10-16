@@ -123,19 +123,20 @@ function ProjectsPanel() {
               <CalciteIcon icon="chevron-right" scale="s" />
             </div>
           </div>
-        </div>
 
-        {/* Trennlinie und New Button */}
-        <div className={styles.separator}></div>
-        <div className={styles.buttonContainer}>
-          <CalciteButton
-            iconStart="plus"
-            kind="brand"
-            width="auto"
-            className={styles.newButton}
-          >
-            New
-          </CalciteButton>
+          {/* New Button direkt nach dem letzten Accordion Item */}
+          <div className={styles.buttonContainer}>
+            <CalciteButton
+              iconStart="plus"
+              kind="neutral"
+              scale="s"
+              width="auto"
+              className={styles.newButton}
+              style={activeButtonStyle}
+            >
+              New Project Site
+            </CalciteButton>
+          </div>
         </div>
       </div>
     </CalcitePanel>
