@@ -18,20 +18,35 @@
 /* Searchbar Styling */
 .searchInput {
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.375rem; /* Gleicher Abstand wie zwischen Accordion-Items */
+}
+
+/* Erzwinge Border-Radius für Searchbar */
+.searchInput calcite-input,
+.searchInput calcite-input::part(input) {
+  --calcite-border-radius: 6px;
+  border-radius: 6px !important;
 }
 
 /* Filter Button Container */
 .filterContainer {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .filterButton {
   flex: 1;
   min-width: 0; /* Erlaubt Flexbox Shrinking */
+  height: 32px; /* Angepasste Höhe für bessere Proportion */
+}
+
+/* Erzwinge Border-Radius für Buttons */
+.filterButton calcite-button,
+.filterButton calcite-button::part(button) {
+  --calcite-border-radius: 6px;
+  border-radius: 6px !important;
 }
 
 /* Accordion Styling */
@@ -40,7 +55,7 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.375rem;
   padding: 0.25rem 0;
 }
 
@@ -74,7 +89,7 @@
 }
 
 /* Icon Styling */
-.accordionItem calcite-icon {
+.accordionHeader calcite-icon {
   color: var(--calcite-color-text-3);
 }
 

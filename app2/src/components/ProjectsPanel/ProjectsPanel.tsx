@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
   CalcitePanel, 
   CalciteInput, 
   CalciteButton,
-  CalciteAccordion,
-  CalciteAccordionItem
+  CalciteIcon
 } from '@esri/calcite-components-react';
 import styles from './ProjectsPanel.module.css';
 
@@ -74,35 +73,35 @@ function ProjectsPanel() {
           <div className={styles.accordionItem}>
             <div className={styles.accordionHeader}>
               <span className={styles.accordionTitle}>Ausklappbar 1</span>
-              <calcite-icon icon="chevron-right" scale="s"></calcite-icon>
+              <CalciteIcon icon="chevron-right" scale="s" />
             </div>
           </div>
 
           <div className={styles.accordionItem}>
             <div className={styles.accordionHeader}>
               <span className={styles.accordionTitle}>Ausklappbar 2</span>
-              <calcite-icon icon="chevron-right" scale="s"></calcite-icon>
+              <CalciteIcon icon="chevron-right" scale="s" />
             </div>
           </div>
 
           <div className={styles.accordionItem}>
             <div className={styles.accordionHeader}>
               <span className={styles.accordionTitle}>Ausklappbar 3</span>
-              <calcite-icon icon="chevron-right" scale="s"></calcite-icon>
+              <CalciteIcon icon="chevron-right" scale="s" />
             </div>
           </div>
 
           <div className={styles.accordionItem}>
             <div className={styles.accordionHeader}>
               <span className={styles.accordionTitle}>Ausklappbar 4</span>
-              <calcite-icon icon="chevron-right" scale="s"></calcite-icon>
+              <CalciteIcon icon="chevron-right" scale="s" />
             </div>
           </div>
 
           <div className={styles.accordionItem}>
             <div className={styles.accordionHeader}>
               <span className={styles.accordionTitle}>Ausklappbar 5</span>
-              <calcite-icon icon="chevron-right" scale="s"></calcite-icon>
+              <CalciteIcon icon="chevron-right" scale="s" />
             </div>
           </div>
         </div>
