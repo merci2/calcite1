@@ -19,12 +19,7 @@
 .searchInput {
   width: 100%;
   --calcite-input-corner-radius: 4px;
-}
-
-/* Entfernt den doppelten Border bei der Searchbar */
-.searchInput calcite-input {
-  --calcite-input-border-color: var(--calcite-color-border-input);
-  box-shadow: none !important;
+  --calcite-input-border-color: var(--calcite-color-border-2);
 }
 
 /* Filter Button Container */
@@ -42,18 +37,22 @@
   --calcite-button-corner-radius: 4px;
 }
 
-/* Entfernt den Outline/Border bei allen Buttons */
+/* Entfernt Border, Box-Shadow und Outline bei allen Buttons */
 .filterButton calcite-button {
   box-shadow: none !important;
   outline: none !important;
 }
 
-/* Verhindert doppelten Border beim Hover auf brand buttons */
-.filterButton calcite-button[kind="brand"] {
+/* Spezifisch für den Hover-Zustand */
+.filterButton calcite-button:hover,
+.filterButton calcite-button:focus {
   box-shadow: none !important;
+  outline: none !important;
 }
 
-.filterButton calcite-button[kind="brand"]:hover {
+/* Entfernt ALLE Borders von Calcite Buttons im Filter Container */
+.filterContainer calcite-button::part(button) {
+  border: none !important;
   box-shadow: none !important;
   outline: none !important;
 }
