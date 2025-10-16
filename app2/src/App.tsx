@@ -14,7 +14,7 @@ function App() {
   return (
     <CalciteShell>
       {/* Linkes Panel */}
-      <CalciteShellPanel slot="panel-start" displayMode="float" width="m">
+      <CalciteShellPanel slot="panel-start" displayMode="dock" width="s">
         <ProjectsPanel />
       </CalciteShellPanel>
 
