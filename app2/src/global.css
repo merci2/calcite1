@@ -34,14 +34,7 @@ body {
   min-height: 100vh;
 }
 
-/* Calcite Components Border-Radius Override */
-calcite-input {
-  --calcite-border-radius: 6px !important;
-}
 
-calcite-button {
-  --calcite-border-radius: 6px !important;
-}
 
 
 
