@@ -59,7 +59,7 @@ function ProjectsPanel() {
             className={styles.filterButton}
             style={activeFilter === 'Filter 1' ? activeButtonStyle : inactiveButtonStyle}
           >
-            Filter 1
+            Type
           </CalciteButton>
           
           <CalciteButton
@@ -71,7 +71,7 @@ function ProjectsPanel() {
             className={styles.filterButton}
             style={activeFilter === 'Filter 2' ? activeButtonStyle : inactiveButtonStyle}
           >
-            Filter 2
+            Client
           </CalciteButton>
           
           <CalciteButton

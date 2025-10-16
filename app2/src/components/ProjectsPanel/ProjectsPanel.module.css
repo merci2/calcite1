@@ -4,7 +4,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--calcite-color-foreground-1);
+  --calcite-panel-background-color: var(--calcite-color-background);
 }
 
 .content {
