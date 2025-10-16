@@ -20,7 +20,7 @@ function ProjectsPanel() {
   };
 
   return (
-    <CalcitePanel heading="Projects" className={styles.panel}>
+    <CalcitePanel heading="Project Sites" className={styles.panel}>
       <div className={styles.content}>
         {/* Searchbar */}
         <CalciteInput
