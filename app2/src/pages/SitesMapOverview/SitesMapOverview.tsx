@@ -9,7 +9,10 @@ const SitesMapOverview: React.FC = () => {
         <CalciteShellPanel slot="panel-start" position="start" resizable>
           <CalcitePanel heading="Projects">
             <CalciteBlock heading="Projektliste" expanded collapsible>
-              <p>Panel-Inhalt</p>
+              <p>Panel-Inhalte</p>
+            </CalciteBlock>
+            <CalciteBlock heading="Projektliste" expanded collapsible>
+              <p>Panel-Inhalte</p>
             </CalciteBlock>
           </CalcitePanel>
         </CalciteShellPanel>
