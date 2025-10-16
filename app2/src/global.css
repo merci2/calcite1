@@ -34,7 +34,9 @@ body {
   min-height: 100vh;
 }
 
-
+:root {
+  --calcite-panel-header-background-color: var(--calcite-color-background);
+}
 
 
 

@@ -36,7 +36,13 @@ function ProjectsPanel() {
   } as React.CSSProperties;
 
   return (
-    <CalcitePanel heading="Project Sites" className={styles.panel}>
+    <CalcitePanel 
+      heading="Project Sites" 
+      className={styles.panel}
+      style={{
+        '--calcite-panel-background-color': 'var(--calcite-color-background)'
+      } as React.CSSProperties}
+    >
       <div className={styles.content}>
         {/* Searchbar */}
         <CalciteInput
